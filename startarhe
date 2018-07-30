@@ -1,0 +1,6 @@
+***,ArHe
+   memory,1000,M
+   gprint,civector,orbital=2;
+   geometry={angstrom
+   Ar
+   He,Ar,R(i)}

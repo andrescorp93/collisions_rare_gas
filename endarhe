@@ -1,0 +1,94 @@
+  basis={
+ spdfgh,1,aug-cc-pCV5Z;C;
+ SP,1,EVEN,NPRIM=3,RATIO=2.5;
+ spdfg,2,aug-cc-pV5Z;C;
+  }
+ 
+expec,LOP2
+ do i=1,#R
+ dummy,He;
+{RHF;wf,18,1,2}
+  {casscf;closed,4,1,1,0;occ,7,3,3,0;DYNW,2;wf,18,1,2;state,4;wf,18,2,2;state,3;wf,18,3,2;state,3;wf,18,4,2;state,2;wf,18,1,0;state,5;wf,18,2,0;state,3;wf,18,3,0;state,3;wf,18,4,0;state,2;EXPEC2,LZZ}
+  {ci;NOSING;closed,4,1,1,0;occ,7,3,3,0;orbital,ignore_error;wf,sym=1,SPIN=2;state,4;save,5101.2}
+  hlsdiag(1)=energd(1)
+  hlsdiag(2)=energd(2)
+  hlsdiag(3)=energd(3)
+  hlsdiag(4)=energd(4)
+    {ci;NOSING;closed,4,1,1,0;occ,7,3,3,0;orbital,ignore_error;wf,sym=2,SPIN=2;state,3;save,5102.2}
+  hlsdiag(5)=energd(1)
+  hlsdiag(6)=energd(2)
+  hlsdiag(7)=energd(3)
+   {ci;NOSING;closed,4,1,1,0;occ,7,3,3,0;orbital,ignore_error;wf,sym=3,SPIN=2;state,3;save,5103.2}
+  hlsdiag(8)=energd(1)
+  hlsdiag(9)=energd(2)
+  hlsdiag(10)=energd(3)
+   {ci;NOSING;closed,4,1,1,0;occ,7,3,3,0;orbital,ignore_error;wf,sym=4,SPIN=2;state,2;save,5104.2}
+  hlsdiag(11)=energd(1)
+  hlsdiag(12)=energd(2)
+  {ci;NOSING;closed,4,1,1,0;occ,7,3,3,0;orbital,ignore_error;wf,sym=1,SPIN=0;State,5;save,5105.2}
+  hlsdiag(13)=energd(1)
+  hlsdiag(14)=energd(2)
+  hlsdiag(15)=energd(3)
+  hlsdiag(16)=energd(4)
+  hlsdiag(17)=energd(5)
+   {ci;NOSING;closed,4,1,1,0;occ,7,3,3,0;orbital,ignore_error;wf,sym=2,SPIN=0;state,3;save,5106.2}
+  hlsdiag(18)=energd(1)
+  hlsdiag(19)=energd(2)
+  hlsdiag(20)=energd(3)
+   {ci;NOSING;closed,4,1,1,0;occ,7,3,3,0;orbital,ignore_error;wf,sym=3,SPIN=0;state,3;save,5107.2}
+  hlsdiag(21)=energd(1)
+  hlsdiag(22)=energd(2)
+  hlsdiag(23)=energd(3)
+   {ci;NOSING;closed,4,1,1,0;occ,7,3,3,0;orbital,ignore_error;wf,sym=4,SPIN=0;state,2;save,5108.2}
+  hlsdiag(24)=energd(1)
+  hlsdiag(25)=energd(2)
+
+  {ci;hlsmat,ls,5101.2,5102.2,5103.2,5104.2,5105.2,5106.2,5107.2,5108.2;print,vls=1,hls=1}
+
+clear,hlsdiag
+ dummy,Ar;
+{RHF;wf,nelec=2,spin=0}
+  {casscf;closed,0,0,0,0;occ,1,0,0,0;wf,nelec=2,spin=0;EXPEC2,LZZ}
+  {ci,nocheck;NOSING;closed,0,0,0,0;occ,1,0,0,0;orbital,ignore_error;wf,SPIN=0;save,5101.2}
+
+clear,hlsdiag
+ dummy;
+{RHF;wf,20,1,2}
+  {casscf;closed,5,1,1,0;occ,8,3,3,0;DYNW,2;wf,20,1,2;state,4;wf,20,2,2;state,3;wf,20,3,2;state,3;wf,20,4,2;state,2;wf,20,1,0;state,5;wf,20,2,0;state,3;wf,20,3,0;state,3;wf,20,4,0;state,2;EXPEC2,LZZ}
+  {ci;NOSING;closed,5,1,1,0;occ,8,3,3,0;orbital,ignore_error;wf,sym=1,SPIN=2;state,4;save,5101.2}
+  hlsdiag(1)=energd(1)
+  hlsdiag(2)=energd(2)
+  hlsdiag(3)=energd(3)
+  hlsdiag(4)=energd(4)
+    {ci;NOSING;closed,5,1,1,0;occ,8,3,3,0;orbital,ignore_error;wf,sym=2,SPIN=2;state,3;save,5102.2}
+  hlsdiag(5)=energd(1)
+  hlsdiag(6)=energd(2)
+  hlsdiag(7)=energd(3)
+   {ci;NOSING;closed,5,1,1,0;occ,8,3,3,0;orbital,ignore_error;wf,sym=3,SPIN=2;state,3;save,5103.2}
+  hlsdiag(8)=energd(1)
+  hlsdiag(9)=energd(2)
+  hlsdiag(10)=energd(3)
+   {ci;NOSING;closed,5,1,1,0;occ,8,3,3,0;orbital,ignore_error;wf,sym=4,SPIN=2;state,2;save,5104.2}
+  hlsdiag(11)=energd(1)
+  hlsdiag(12)=energd(2)
+  {ci;NOSING;closed,5,1,1,0;occ,8,3,3,0;orbital,ignore_error;wf,sym=1,SPIN=0;State,5;save,5105.2}
+  hlsdiag(13)=energd(1)
+  hlsdiag(14)=energd(2)
+  hlsdiag(15)=energd(3)
+  hlsdiag(16)=energd(4)
+  hlsdiag(17)=energd(5)
+   {ci;NOSING;closed,5,1,1,0;occ,8,3,3,0;orbital,ignore_error;wf,sym=2,SPIN=0;state,3;save,5106.2}
+  hlsdiag(18)=energd(1)
+  hlsdiag(19)=energd(2)
+  hlsdiag(20)=energd(3)
+   {ci;NOSING;closed,5,1,1,0;occ,8,3,3,0;orbital,ignore_error;wf,sym=3,SPIN=0;state,3;save,5107.2}
+  hlsdiag(21)=energd(1)
+  hlsdiag(22)=energd(2)
+  hlsdiag(23)=energd(3)
+   {ci;NOSING;closed,5,1,1,0;occ,8,3,3,0;orbital,ignore_error;wf,sym=4,SPIN=0;state,2;save,5108.2}
+  hlsdiag(24)=energd(1)
+  hlsdiag(25)=energd(2)
+
+  {ci;hlsmat,ls,5101.2,5102.2,5103.2,5104.2,5105.2,5106.2,5107.2,5108.2;print,vls=1,hls=1}
+
+enddo

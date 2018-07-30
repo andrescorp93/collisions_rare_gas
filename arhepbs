@@ -1,0 +1,10 @@
+#!/bin/bash -l
+#PBS -N molpro
+#PBS -l walltime=96:00:00
+#PBS -l nodes=1:ppn=8:bigmem
+#PBS -A p0122
+
+cd /tmp
+
+module load molpro/parallel
+
